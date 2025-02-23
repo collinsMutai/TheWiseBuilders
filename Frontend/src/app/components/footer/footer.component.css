@@ -1,0 +1,122 @@
+/* Footer Section Styling */
+.footer {
+  background-color: #13453a;
+  color: white;
+  padding: 20px 0;
+  padding-bottom: 0;
+  background-image: url("/assets/Map.png");
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  background-repeat: no-repeat;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-right: 100px;
+  padding: 20px;
+  padding-top: 0px;
+  border-top: 1px solid #ccc;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1;
+  padding: 0 20px;
+  padding-top: 20px;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.hours {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.footer-icon .icon {
+  font-size: 30px;
+  color: #fff;
+  margin-right: 20px;
+  background-color: #1f4b35;
+  border-radius: 50%;
+  padding: 25px;
+}
+
+.footer-column-text h3 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.footer-column-text h3,
+.footer-column-text p {
+  margin: 0 0 9px 0;
+}
+
+.footer-column-text p,
+.footer-bottom p {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.footer-bottom {
+  background-color: #fed65c;
+  color: #000;
+  padding: 30px 0;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .footer-row {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    margin-right: 0px;
+  }
+  .footer-column {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+    padding-bottom: 20px;
+  }
+
+  .footer-column-text {
+    text-align: center;
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-row {
+    flex-direction: column;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
+  .footer-column {
+    width: 100%;
+    padding-bottom: 20px;
+    flex-direction: row;
+    justify-content: left;
+    align-items: start;
+  }
+
+  .footer-column-text {
+    text-align: left;
+    padding-top: 0px;
+  }
+
+  .hours {
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+}
