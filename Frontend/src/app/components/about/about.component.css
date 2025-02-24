@@ -1,0 +1,206 @@
+/* General Styles for Desktop */
+.about-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: url("/assets/about-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.about-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(31, 41, 17, 0.5);
+  z-index: 1;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  z-index: 2;
+  position: relative;
+}
+
+.col {
+  flex: 1;
+  margin: 3px;
+}
+
+.left-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.donation-btn {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #fff !important;
+  color: #fff !important;
+  border-radius: 25px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 2;
+}
+
+.donation-btn:hover {
+  background-color: lightgray;
+  color: #000 !important;
+}
+
+.about-btn {
+  padding: 15px 34px;
+  margin-top: 30px;
+  background-color: #FED65C;
+  border: none !important;
+  outline: none !important;
+  color: #093D31 !important;
+  border-radius: 100px;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-btn svg {
+  transform: rotate(320deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-btn:hover {
+  background-color: lightgray;
+  color: #000 !important;
+}
+
+.about-btn:hover svg {
+  transform: rotate(0deg);
+}
+
+.donation-btn svg {
+  margin-right: 10px;
+}
+
+.about-btn svg {
+  margin-left: 10px;
+}
+
+.title {
+  margin-top: 20px;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  color: #fff !important;
+  text-transform: capitalize;
+  z-index: 2;
+}
+
+.description {
+  font-size: 16px;
+  text-align: left;
+  font-weight: 400;
+  margin-top: 16px !important;
+  color: #fff !important;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  z-index: 2;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
+    .about-container{
+        height: auto;
+    }
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col {
+    margin: 10px 0;
+  }
+
+  .left-column {
+    margin-bottom: 20px;
+  }
+
+  .right-column {
+    align-items: left;
+  }
+
+  .donation-btn,
+  .about-btn {
+    /* width: 100%; */
+    padding: 12px 25px;
+    font-size: 14px;
+  }
+
+  .title {
+    font-size: 32px;
+    text-align: left;
+  }
+
+  .description {
+    font-size: 16px !important;
+    text-align: left;
+    margin-top: 10px;
+  }
+
+  .about-image {
+    width: 100%; /* Ensures the image doesn't overflow on small screens */
+    margin: 0 auto;
+  }
+}
+
+/* Very Small Mobile Styles */
+@media only screen and (max-width: 480px) {
+  .donation-btn,
+  .about-btn {
+    font-size: 12px;
+    padding: 10px 20px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .description {
+    font-size: 12px;
+    margin-top: 8px;
+  }
+
+  .about-image {
+    width: 90%; /* Even smaller for very small screens */
+  }
+}
