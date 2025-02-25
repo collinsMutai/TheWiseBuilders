@@ -77,10 +77,10 @@
 .about-btn {
   padding: 15px 34px;
   margin-top: 30px;
-  background-color: #FED65C;
+  background-color: #fed65c;
   border: none !important;
   outline: none !important;
-  color: #093D31 !important;
+  color: #093d31 !important;
   border-radius: 100px;
   text-transform: capitalize;
   font-weight: 500;
@@ -137,11 +137,10 @@
   z-index: 2;
 }
 
-/* Mobile Styles */
 @media only screen and (max-width: 768px) {
-    .about-container{
-        height: auto;
-    }
+  .about-container {
+    height: auto;
+  }
   .row {
     flex-direction: column;
     align-items: center;
@@ -161,7 +160,6 @@
 
   .donation-btn,
   .about-btn {
-    /* width: 100%; */
     padding: 12px 25px;
     font-size: 14px;
   }
@@ -178,12 +176,11 @@
   }
 
   .about-image {
-    width: 100%; /* Ensures the image doesn't overflow on small screens */
+    width: 100%;
     margin: 0 auto;
   }
 }
 
-/* Very Small Mobile Styles */
 @media only screen and (max-width: 480px) {
   .donation-btn,
   .about-btn {
@@ -201,6 +198,6 @@
   }
 
   .about-image {
-    width: 90%; /* Even smaller for very small screens */
+    width: 90%;
   }
 }
