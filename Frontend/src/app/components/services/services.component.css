@@ -1,0 +1,191 @@
+/* General Styles for Service Component */
+.services-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #093d31;
+  background: url("/assets/slider.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  position: relative;
+  gap: 30px;
+}
+
+.services-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(31, 41, 17, 0.5);
+  z-index: 1;
+}
+
+.header-container {
+  text-align: center;
+  z-index: 2;
+  margin-bottom: 30px;
+}
+
+.donation-btn {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #fff !important;
+  color: #fff !important;
+  border-radius: 25px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 2;
+}
+
+.donation-btn:hover {
+  background-color: lightgray;
+  color: #000 !important;
+}
+
+.title {
+  margin-top: 20px;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  color: #fff !important;
+  text-transform: capitalize;
+}
+
+.services-title {
+  color: #1c1c25 !important;
+  font-size: 18px !important;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: capitalize !important;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: row; /* Align cards inline */
+  justify-content: center;
+  flex-wrap: wrap; /* Allow cards to wrap to the next line if needed */
+  gap: 30px; /* Spacing between cards */
+  z-index: 2;
+  width: 100%; /* Ensure the container takes full width */
+  max-width: 1200px; /* Optional: Limit the maximum width of the container */
+}
+
+.service-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  width: calc(33.333% - 20px); /* Three cards per row with spacing */
+  max-width: 380px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect on card */
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon flip only when hovering over the service card */
+.service-card:hover .service-icon {
+  transform: scaleX(-1); /* Flip the icon horizontally */
+  color: #f39c12; /* Change color on hover */
+}
+
+/* Button background color change when the entire card is hovered */
+.service-card:hover .service-button {
+  background-color: #f39c12; /* Change to any color you want */
+}
+
+/* Icon styles */
+.service-header .service-icon {
+  width: 50px;
+  height: 50px;
+  color: #093d31;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.service-header h3 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #093d31;
+  text-transform: uppercase;
+}
+
+.service-card p {
+  margin: 10px 0;
+  color: #555;
+  line-height: 1.5;
+}
+
+.service-button {
+  padding: 12px 25px;
+  background-color: #093d31;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  /* transition: background-color 0.3s ease, transform 0.3s ease; */
+  align-self: flex-start;
+}
+
+/* Mobile Responsiveness */
+@media only screen and (max-width: 768px) {
+  .header-container{
+    text-align: left;
+  }
+  
+  .service-card {
+    width: 100%; /* Full width for each card on mobile */
+    max-width: none; /* Remove max-width */
+  }
+
+  .cards-container {
+    flex-direction: column; /* Stack cards vertically on mobile */
+    gap: 20px; /* Adjust the gap between stacked cards */
+  }
+
+  .title {
+    font-size: 32px; /* Adjust title size for mobile */
+    text-align: left; /* Align text left for mobile */
+  }
+
+  .services-title {
+    font-size: 16px; /* Adjust subtitle size for mobile */
+  }
+
+  .donation-btn {
+    font-size: 14px; /* Adjust button font size for mobile */
+    padding: 12px 25px; /* Adjust button padding for mobile */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .donation-btn {
+    font-size: 12px; /* Further reduce font size on small screens */
+    padding: 10px 20px; /* Further reduce padding for small screens */
+  }
+
+  .title {
+    font-size: 28px; /* Further reduce title size on extra small screens */
+  }
+
+  .services-title {
+    font-size: 14px; /* Adjust subtitle size for smaller screens */
+  }
+}
