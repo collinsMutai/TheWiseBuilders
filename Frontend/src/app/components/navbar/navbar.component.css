@@ -1,0 +1,117 @@
+/* navbar.component.css */
+.navbar {
+  background-color: #093d31;
+  padding: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+}
+
+.contact {
+  display: flex;
+  align-items: center !important;
+  gap: 20px;
+  justify-content: center;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center !important;
+  gap: 5px;
+}
+
+.contact-item p {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+}
+
+.contact-icon {
+  color: #fff;
+  height: 16px;
+  width: 16px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.logo span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.menu-links {
+  display: flex;
+  gap: 20px;
+}
+
+.menu-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.menu-links a:hover {
+  color: #f39c12;
+}
+
+.donate-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.donate-btn {
+  padding: 15px 34px;
+  margin-top: 30px;
+  background-color: #fed65c;
+  border: none !important;
+  outline: none !important;
+  color: #093d31 !important;
+  border-radius: 100px;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.donate-btn svg {
+  transform: rotate(320deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.donate-btn:hover {
+  background-color: lightgray;
+  color: #000 !important;
+}
+
+.donate-btn:hover svg {
+  transform: rotate(0deg);
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+}
